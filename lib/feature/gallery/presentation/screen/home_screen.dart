@@ -25,6 +25,9 @@ class HomeScreen extends StatelessWidget {
             (route) => false,
           );
         }
+        if (state is LoadImagesSuccessState) {
+          Navigator.of(context).pop();
+        }
       },
       builder: (context, state) {
         if (state is InitialState) {
