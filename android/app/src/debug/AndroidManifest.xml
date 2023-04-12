@@ -5,4 +5,5 @@
          to allow setting breakpoints, to provide hot reload, etc.
     -->
     <uses-permission android:name="android.permission.INTERNET"/>
+    <meta-data android:name="android.hardware.renderer.enable-misc" android:value="true" />
 </manifest>

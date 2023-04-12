@@ -33,3 +33,7 @@ class CustomeAppBar extends StatelessWidget {
     );
   }
 }
+/*child: CircleAvatar(
+                radius: 25,
+                backgroundImage: NetworkImage(imageUrl),
+              ), */

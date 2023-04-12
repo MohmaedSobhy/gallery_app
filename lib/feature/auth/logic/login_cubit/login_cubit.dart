@@ -21,10 +21,10 @@ class LoginCubit extends Cubit<LoginState> {
   void loginMethod() async {
     String email = emailController.text.toString();
     String password = passwordController.text.toString();
-    print(email);
+    //print(emailController.value);
     await post(Uri.parse(ApiEndPoints.login), body: {
-      'email': email,
-      'password': password,
+      "email": '$email',
+      "password": "$password",
     }).then((response) {
       if (response.statusCode == 200 &&
           (!response.body.contains("error_message"))) {
@@ -32,7 +32,6 @@ class LoginCubit extends Cubit<LoginState> {
         emit(LoginStateSuccess());
         return;
       } else {
-        print(response.body);
         showToastMessage(
           message: "Check Your Email",
           color: Colors.red,

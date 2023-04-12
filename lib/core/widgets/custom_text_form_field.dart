@@ -6,7 +6,6 @@ class CustomeTextFormField extends StatelessWidget {
   final TextInputType inputType;
   final TextEditingController? controller;
   final bool? obscure;
-  var onSubmit;
   // ignore: prefer_typing_uninitialized_variables
   var validator;
   CustomeTextFormField({
@@ -15,7 +14,6 @@ class CustomeTextFormField extends StatelessWidget {
     this.controller,
     required this.inputType,
     this.hint,
-    this.onSubmit,
     this.obscure,
   });
 
@@ -25,7 +23,6 @@ class CustomeTextFormField extends StatelessWidget {
       controller: controller,
       keyboardType: inputType,
       validator: validator,
-      onFieldSubmitted: onSubmit,
       maxLines: 1,
       obscureText: (obscure == null) ? false : obscure!,
       decoration: InputDecoration(

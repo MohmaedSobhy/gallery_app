@@ -2,11 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gallery_app/core/helper/shared_prefrences.dart';
 import 'package:gallery_app/feature/auth/presentation/screens/login_screen.dart';
-
 import 'package:gallery_app/feature/gallery/presentation/screen/home_screen.dart';
-
 import 'package:sizer/sizer.dart';
-
 import 'feature/gallery/logic/cubit/home_screen_cubit.dart';
 
 bool userLoginBefore = false;

@@ -53,9 +53,6 @@ class FrosetGlassItem extends StatelessWidget {
                           controller: loginCubit.emailController,
                           hint: AppString.userName,
                           inputType: TextInputType.emailAddress,
-                          onSubmit: (value) {
-                            loginCubit.emailController.text = value;
-                          },
                           validator: (value) {
                             if (value.toString().isEmpty) {
                               return "Enter Email";
@@ -70,9 +67,6 @@ class FrosetGlassItem extends StatelessWidget {
                           controller: loginCubit.passwordController,
                           hint: AppString.password,
                           obscure: true,
-                          onSubmit: (value) {
-                            loginCubit.passwordController.text = value;
-                          },
                           validator: (value) {
                             if (value.toString().isEmpty) {
                               return "Enter password";

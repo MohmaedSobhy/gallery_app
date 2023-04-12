@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gallery_app/feature/gallery/logic/cubit/home_screen_cubit.dart';
 import 'package:gallery_app/feature/gallery/logic/cubit/home_screen_state.dart';
+import 'package:sizer/sizer.dart';
 import '../../../../core/localization/app_string.dart';
 import '../../../../core/widgets/frosted_glass_widget.dart';
 import '../widgets/custom_button.dart';
