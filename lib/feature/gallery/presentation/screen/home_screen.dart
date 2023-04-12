@@ -19,14 +19,14 @@ class HomeScreen extends StatelessWidget {
     HomeScreenCubit homeScreenCubit = HomeScreenCubit.getInstance(context);
     return BlocConsumer<HomeScreenCubit, HomeScreenState>(
       listener: (context, state) {
-        bool canPop = ModalRoute.of(context)?.canPop ?? false;
         if (state is LogoutState) {
           Navigator.of(context).pushAndRemoveUntil(
             MaterialPageRoute(builder: (context) => const LoginScreen()),
             (route) => false,
           );
         }
-        if (state is LoadImagesSuccessState && canPop) {
+        if (state is LoadImagesSuccessState &&
+            (ModalRoute.of(context)?.canPop ?? false)) {
           Navigator.of(context).pop();
         }
       },
